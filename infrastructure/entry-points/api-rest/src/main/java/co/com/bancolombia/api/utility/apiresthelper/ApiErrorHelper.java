@@ -48,7 +48,7 @@ public class ApiErrorHelper {
 //        return new ResponseExceptionDTO(response,httpStatus);
 //    }
 
-    protected ResponseExceptionDTO getErrorBusinessException(BusinessException businessException) {
+    public ResponseExceptionDTO getErrorBusinessException(BusinessException businessException) {
         Response response = new Response();
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
 
