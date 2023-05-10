@@ -17,15 +17,18 @@ spring:
     password: "root"
     driver-class-name: "com.mysql.cj.jdbc.Driver"
 #    driverClassName: "org.h2.Driver"
-    jpa:
-      database: mysql
-      show-sql: true
-      generate-ddl: true
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      SQL: debug
+      id:
+        new_generator_mappings: true
+    properties:
       hibernate:
-        ddl-auto: create
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
 
 management:

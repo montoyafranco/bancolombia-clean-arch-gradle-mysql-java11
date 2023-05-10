@@ -9,4 +9,6 @@ public interface PatientRepository {
     List<Patient> findAll();
 
     List<Patient> traer();
+
+    Patient save( Patient patient);
 }

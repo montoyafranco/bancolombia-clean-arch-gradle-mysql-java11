@@ -1,6 +1,7 @@
 package co.com.bancolombia.jpa.patient;
 
 
+import co.com.bancolombia.model.patient.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,6 +14,10 @@ public interface PatientDataRepository extends JpaRepository<PatientData,Long> {
 
     @Query("select p from PatientData p")
     List<PatientData> traer();
+
+
+    Patient save(Patient patient);
+
 
 
 

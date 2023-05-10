@@ -32,4 +32,6 @@ public class PatientRepositoryAdapter extends AdapterOperations<Patient,PatientD
                 .collect(Collectors.toList());
 
     }
+
+
 }
