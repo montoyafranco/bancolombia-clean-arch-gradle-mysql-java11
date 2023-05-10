@@ -4,11 +4,14 @@ import co.com.bancolombia.api.utility.BusinessException;
 import co.com.bancolombia.api.utility.Response;
 import co.com.bancolombia.api.utility.ResponseExceptionDTO;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.sql.SQLException;
 
+@Controller
 public class ApiErrorHelper {
-    protected ResponseExceptionDTO getErrorMessageInternal(Exception exception) {
+    public ResponseExceptionDTO getErrorMessageInternal(Exception exception) {
         Response response = new Response();
         HttpStatus httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
 
